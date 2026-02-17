@@ -1,0 +1,69 @@
+using System;
+using UnityEngine;
+
+public class Clock : MonoBehaviour
+{
+    public event Action UpdateTime;
+
+    int seconds = 0;
+    int prevTime = 0;
+    string[] hours = {"12:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00"};
+    public string hour;
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+        UpdateTimeGUI();
+        Timer();
+        Debug.Log(seconds);
+    }
+
+    void Timer()
+    {
+        if (Math.Floor(Time.time) > prevTime)
+        {
+            prevTime = (int)Math.Floor(Time.time);
+            seconds++;
+        }
+    }
+
+    void UpdateTimeGUI()
+    {
+        switch (seconds)
+        {
+            case >= 0 and < 60:
+                hour = hours[0];
+                break;
+            case >= 60 and < 120:
+                hour = hours[1];
+                break;
+            case >= 120 and < 180:
+                hour = hours[2];
+                break;
+            case >= 180 and < 240:
+                hour = hours[3];
+                break;
+            case >= 240 and < 300:
+                hour = hours[4];
+                break;
+            case >= 300 and < 360:
+                hour = hours[5];
+                break;
+            case >= 360 and < 420:
+                hour = hours[6];
+                break;
+        }
+    }
+
+    void IncreaseTime()
+    {
+        if (Time.time > prevTime)
+        {
+            Debug.Log("Time " + Time.time);
+        }
+    }
+}
