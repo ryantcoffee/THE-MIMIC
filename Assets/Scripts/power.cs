@@ -8,7 +8,7 @@ public class power : MonoBehaviour
     int powerLoseCounter = 0;
     int powerLoseRate = 20;
 
-    int Power = 100;
+    public int Power = 100;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
