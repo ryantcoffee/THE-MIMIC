@@ -5,7 +5,7 @@ public class Clock : MonoBehaviour
 {
     public event Action UpdateTime;
 
-    int seconds = 0;
+    public int seconds = 0;
     int prevTime = 0;
     string[] hours = {"12:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00"};
     public string hour;
