@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "THE-MIMIC.slnx"
+    "dotnet.defaultSolution": "THEMIMIC2.slnx"
 }

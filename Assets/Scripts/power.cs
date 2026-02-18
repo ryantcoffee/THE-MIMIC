@@ -7,14 +7,19 @@ public class power : MonoBehaviour
 {
     public Clock clock;
     public DoorControl doorControl;
+    public CameraControl cameraControl;
+
+
     int prevSecond = 0;
-    int powerLoseCounterIncrease = 1;
-    int powerLoseCounter = 0;
-    int powerLoseRate = 20;
+    int powerLossOverTime = 1;
+    int counterBeforePowerLoss = 0;
+    int powerLossRate = 20;
 
     int powerLossLeftDoor = 0;
     int powerLossRightDoor = 0;
     int powerLossDoors = 0;
+    int powerLossCamera = 0;
+    int powerLossCounterIncreaseTotal = 0;
 
     public float Power = 100;
     public float maxPower = 100;
@@ -25,28 +30,40 @@ public class power : MonoBehaviour
     {
         clock = clock.GetComponent<Clock>();
         doorControl = doorControl.GetComponent<DoorControl>();
-        
+        cameraControl = cameraControl.GetComponent<CameraControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        losePower();
+        if (Power <= 0)
+        {
+            Power = 0;
+        } else
+        {
+            losePower();
+        }
+
         doorPowerLoss();
+        cameraPowerLoss();
         powerPercent = (Power / maxPower) * 100;
+
+        Debug.Log(powerLossCounterIncreaseTotal);
     }
 
     void losePower()
     {
+        powerLossCounterIncreaseTotal = powerLossOverTime + powerLossDoors + powerLossCamera;
+
         if (clock.seconds != prevSecond)
         {
             prevSecond = clock.seconds;
-            powerLoseCounter  += (powerLoseCounterIncrease + powerLossDoors);
+            counterBeforePowerLoss  += powerLossCounterIncreaseTotal;
 
-            if (powerLoseCounter >= powerLoseRate)
+            if (counterBeforePowerLoss >= powerLossRate)
             {
                 Power--;
-                powerLoseCounter = 0;
+                counterBeforePowerLoss = 0;
             }
         }
     }
@@ -55,19 +72,29 @@ public class power : MonoBehaviour
     {
         if (doorControl.leftDoorClosed)
         {
-            powerLossLeftDoor = 3;
+            powerLossLeftDoor = 7;
         } else
         {
             powerLossLeftDoor = 0;
         }
         if (doorControl.rightDoorClosed)
         {
-            powerLossRightDoor = 3;
+            powerLossRightDoor = 7;
         } else
         {
             powerLossRightDoor = 0;
         }
 
         powerLossDoors = powerLossLeftDoor + powerLossRightDoor;
+    }
+
+    void cameraPowerLoss() {
+        if (cameraControl.camEnabled)
+        {
+            powerLossCamera = 2;
+        } else
+        {
+            powerLossCamera = 0;
+        }
     }
 }
