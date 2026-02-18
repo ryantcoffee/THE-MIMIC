@@ -4,8 +4,8 @@ using UnityEngine;
 public class DoorControl : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    bool leftDoorClosed = false;
-    bool rightDoorClosed = false;
+    public bool leftDoorClosed = false;
+    public bool rightDoorClosed = false;
     
     //Initialize Actions
     public event Action closeLeftDoorEvent;
