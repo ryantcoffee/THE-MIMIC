@@ -879,6 +879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bee48223a7349148ff8cbc0686de9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  leftDoorClosed: 0
+  rightDoorClosed: 0
 --- !u!4 &1202680566
 Transform:
   m_ObjectHideFlags: 0
@@ -1436,7 +1438,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   clock: {fileID: 2013622143}
+  doorControl: {fileID: 1202680565}
   Power: 100
+  maxPower: 100
+  powerPercent: 100
 --- !u!4 &1441601135
 Transform:
   m_ObjectHideFlags: 0
