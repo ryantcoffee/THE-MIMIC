@@ -27,7 +27,7 @@ public class Clock : MonoBehaviour
         {
             prevTime = (int)Math.Floor(Time.time);
             seconds++;
-            Debug.Log(seconds);
+            // Debug.Log(seconds);
         }
     }
 
@@ -63,7 +63,7 @@ public class Clock : MonoBehaviour
     {
         if (Time.time > prevTime)
         {
-            Debug.Log("Time " + Time.time);
+            // Debug.Log("Time " + Time.time);
         }
     }
 }

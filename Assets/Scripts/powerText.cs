@@ -16,7 +16,7 @@ public class powerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PowerText.text = power.Power.ToString() + "%";
+        PowerText.text = power.powerPercent.ToString() + "%";
         
     }
 }
