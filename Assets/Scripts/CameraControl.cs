@@ -5,7 +5,7 @@ public class CameraControl : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    bool camEnabled = false;
+    public bool camEnabled = false;
     public event Action disableCamEvent;
     public event Action enableCamEvent;
 
