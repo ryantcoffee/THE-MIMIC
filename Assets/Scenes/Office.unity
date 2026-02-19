@@ -777,6 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e86b8600f76f2c43a46ffe800edc18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  Power: {fileID: 1441601134}
   camEnabled: 0
 --- !u!4 &339920543
 Transform:
@@ -2393,6 +2394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bee48223a7349148ff8cbc0686de9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  Power: {fileID: 1441601134}
   leftDoorClosed: 0
   rightDoorClosed: 0
 --- !u!4 &1202680566

@@ -48,7 +48,6 @@ public class power : MonoBehaviour
         cameraPowerLoss();
         powerPercent = (Power / maxPower) * 100;
 
-        Debug.Log(powerLossCounterIncreaseTotal);
     }
 
     void losePower()
