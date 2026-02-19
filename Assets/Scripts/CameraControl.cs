@@ -21,6 +21,9 @@ public class CameraControl : MonoBehaviour
     public event Action cam6event;
     public event Action cam7event;
     public event Action cam8event;
+    
+//                               0  1  2  3  4  5  6  7
+    public int[] camLocations = {6, 7, 8, 5, 2, 4, 1, 3};
 
     void Start()
     {
