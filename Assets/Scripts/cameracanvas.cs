@@ -22,10 +22,12 @@ public class cameracanvas : MonoBehaviour
     void enableCam()
     {
         cameraCanvas.enabled = true;
+        gameObject.SetActive(true);
     }
 
     void disableCam()
     {
         cameraCanvas.enabled = false;
+        gameObject.SetActive(false);
     }
 }
