@@ -1,5 +1,7 @@
+using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FreddyController : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class FreddyController : MonoBehaviour
     public Clock clock;
     public CameraControl cameraControl;
     public DoorControl doorControl;
+    public jumpscareController jumpscareControl;
 
     public int locationIndex = 0;
     
@@ -21,11 +24,16 @@ public class FreddyController : MonoBehaviour
         clock = clock.GetComponent<Clock>();
         cameraControl = cameraControl.GetComponent<CameraControl>();
         doorControl = doorControl.GetComponent<DoorControl>();
+        jumpscareControl = jumpscareControl.GetComponent<jumpscareController>();
     }
     // Update is called once per frame
     void Update()
     {
         moveTime();
+        // if (clock.seconds == 5)
+        // {
+        //     jumpscare();
+        // }
         
     }
 
@@ -85,5 +93,8 @@ public class FreddyController : MonoBehaviour
     void jumpscare()
     {
         Debug.Log("Jumpscare!");
+        jumpscareControl.killerAnimtronic = "Freddy";
+        SceneManager.LoadScene("Jumpscare");
     }
 }
+

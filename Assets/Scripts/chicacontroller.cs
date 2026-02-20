@@ -7,6 +7,7 @@ public class chicacontroller : MonoBehaviour
     public Clock clock;
     public CameraControl cameraControl;
     public DoorControl doorControl;
+    public jumpscareController jumpscareControl;
 
     public int locationIndex = 0;
     
@@ -21,6 +22,7 @@ public class chicacontroller : MonoBehaviour
         clock = clock.GetComponent<Clock>();
         cameraControl = cameraControl.GetComponent<CameraControl>();
         doorControl = doorControl.GetComponent<DoorControl>();
+        jumpscareControl = jumpscareControl.GetComponent<jumpscareController>();
     }
     // Update is called once per frame
     void Update()
@@ -85,5 +87,6 @@ public class chicacontroller : MonoBehaviour
     void jumpscare()
     {
         Debug.Log("Jumpscare!");
+        jumpscareControl.killerAnimtronic = "Chica";
     }
 }
