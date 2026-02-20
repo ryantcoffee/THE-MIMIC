@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class FreddyController : MonoBehaviour
+public class bonniecontroller : MonoBehaviour
 {
 
     public Clock clock;
@@ -12,7 +12,7 @@ public class FreddyController : MonoBehaviour
     
     public int location = 6;
     int prevTime = 0;
-    int timePerChance = 7;
+    int timePerChance = 2;
 
     int jumpscareFailTime = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,10 +35,10 @@ public class FreddyController : MonoBehaviour
         {
             prevTime = clock.seconds;
             
-            if (Random.Range(1, 2) == 1)
+            if (Random.Range(1, 10) == 5)
             {
                 Move();
-                Debug.Log("Freddy: " + locationIndex + " " + cameraControl.camLocations[locationIndex]);
+                Debug.Log("Bonnie: " + locationIndex + " " + cameraControl.camLocations[locationIndex]);
             }
            
             

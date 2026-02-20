@@ -8,6 +8,7 @@ public class CameraControl : MonoBehaviour
     public power Power;
 
     public bool camEnabled = false;
+    public int currentCam = 6;
     public event Action disableCamEvent;
     public event Action enableCamEvent;
 
@@ -59,34 +60,42 @@ public class CameraControl : MonoBehaviour
     public void camselect1()
     {
         cam1event.Invoke();
+        currentCam = 1;
     }
     public void camselect2()
     {
         cam2event.Invoke();
+        currentCam = 2;
     }
     public void camselect3()
     {
         cam3event.Invoke();
+        currentCam = 3;
     }
     public void camselect4()
     {
         cam4event.Invoke();
+        currentCam = 4;
     }
     public void camselect5()
     {
         cam5event.Invoke();
+        currentCam = 5;
     }
     public void camselect6()
     {
         cam6event.Invoke();
+        currentCam = 6;
     }
     public void camselect7()
     {
         cam7event.Invoke();
+        currentCam = 7;
     }
     public void camselect8()
     {
         cam8event.Invoke();
+        currentCam = 8;
     }
 
 
