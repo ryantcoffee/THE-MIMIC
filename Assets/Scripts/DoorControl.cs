@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class DoorControl : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class DoorControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public bool leftDoorClosed = false;
     public bool rightDoorClosed = false;
+    public AudioSource audioSource;
     
     //Initialize Actions
     public event Action closeLeftDoorEvent;
@@ -17,6 +19,7 @@ public class DoorControl : MonoBehaviour
     void Start()
     {
         Power = Power.GetComponent<power>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,12 +37,15 @@ public class DoorControl : MonoBehaviour
             Debug.Log("Left Door Closed!");
             leftDoorClosed = true;
             closeLeftDoorEvent.Invoke();
+            audioSource.Play();
+
         }
         else
         {
             Debug.Log("Left Door Opened!");
             leftDoorClosed = false;
             openLeftDoorEvent.Invoke();
+            audioSource.Play();
         }
 
         }
@@ -55,12 +61,14 @@ public class DoorControl : MonoBehaviour
             Debug.Log("Right Door Closed!");
             rightDoorClosed = true;
             closeRightDoorEvent.Invoke();
+            audioSource.Play();
         }
         else
         {
             Debug.Log("Right Door Opened!");
             rightDoorClosed = false;
             openRightDoorEvent.Invoke();
+            audioSource.Play();
         }
         
         }
@@ -75,11 +83,13 @@ public class DoorControl : MonoBehaviour
             {
                 leftDoorClosed = false;
                 openLeftDoorEvent.Invoke();
+                audioSource.Play();
             }
             if (rightDoorClosed == true)
             {
                 rightDoorClosed = false;
                 openRightDoorEvent.Invoke();
+                audioSource.Play();
             }
         }
     }
