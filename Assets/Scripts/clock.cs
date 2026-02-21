@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Clock : MonoBehaviour
 {
@@ -7,18 +8,21 @@ public class Clock : MonoBehaviour
 
     public int seconds = 0;
     int prevTime = 0;
-    string[] hours = {"12:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00"};
+    string[] hours = {"12 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM"};
     public string hour;
 
     void Start()
     {
-
+        
     }
 
     void Update()
     {
         UpdateTimeGUI();
         Timer();
+
+        
+
     }
 
     void Timer()
@@ -55,6 +59,7 @@ public class Clock : MonoBehaviour
                 break;
             case >= 360 and < 420:
                 hour = hours[6];
+                SceneManager.LoadScene("6AM");
                 break;
         }
     }

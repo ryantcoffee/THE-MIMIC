@@ -8,6 +8,7 @@ public class power : MonoBehaviour
     public Clock clock;
     public DoorControl doorControl;
     public CameraControl cameraControl;
+    public AudioSource audioSource;
 
 
     int prevSecond = 0;
@@ -25,12 +26,15 @@ public class power : MonoBehaviour
     public float maxPower = 100;
     public float powerPercent = 100;
 
+    bool outageSoundPlayed = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         clock = clock.GetComponent<Clock>();
         doorControl = doorControl.GetComponent<DoorControl>();
         cameraControl = cameraControl.GetComponent<CameraControl>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,15 @@ public class power : MonoBehaviour
         if (Power <= 0)
         {
             Power = 0;
+
+            if(outageSoundPlayed == false)
+            {
+                audioSource.Play();
+                outageSoundPlayed = true;
+            }
+
+
+
         } else
         {
             losePower();

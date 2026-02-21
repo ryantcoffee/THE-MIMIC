@@ -12,6 +12,9 @@ public class CameraControl : MonoBehaviour
     public event Action disableCamEvent;
     public event Action enableCamEvent;
 
+    public AudioSource toggleCam;
+    public AudioSource switchCam;
+
 
     //specific camera events
     public event Action cam1event;
@@ -46,12 +49,14 @@ public class CameraControl : MonoBehaviour
             Debug.Log("Camera Enabled");
             camEnabled = true;
             enableCamEvent.Invoke();
+            toggleCam.Play();
         }
         else
         {
             Debug.Log("Camera Disabled");
             camEnabled = false;
             disableCamEvent.Invoke();
+            toggleCam.Play();
         }
 
         }
@@ -61,41 +66,49 @@ public class CameraControl : MonoBehaviour
     {
         cam1event.Invoke();
         currentCam = 1;
+        switchCam.Play();
     }
     public void camselect2()
     {
         cam2event.Invoke();
         currentCam = 2;
+        switchCam.Play();
     }
     public void camselect3()
     {
         cam3event.Invoke();
         currentCam = 3;
+        switchCam.Play();
     }
     public void camselect4()
     {
         cam4event.Invoke();
         currentCam = 4;
+        switchCam.Play();
     }
     public void camselect5()
     {
         cam5event.Invoke();
         currentCam = 5;
+        switchCam.Play();
     }
     public void camselect6()
     {
         cam6event.Invoke();
         currentCam = 6;
+        switchCam.Play();
     }
     public void camselect7()
     {
         cam7event.Invoke();
         currentCam = 7;
+        switchCam.Play();
     }
     public void camselect8()
     {
         cam8event.Invoke();
         currentCam = 8;
+        switchCam.Play();
     }
 
 
@@ -107,6 +120,7 @@ public class CameraControl : MonoBehaviour
             {
                 camEnabled = false;
                 disableCamEvent.Invoke();
+                toggleCam.Play();
             }
         }
     }
