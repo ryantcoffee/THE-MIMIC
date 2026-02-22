@@ -2,6 +2,7 @@ using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class FreddyController : MonoBehaviour
 {
@@ -11,11 +12,15 @@ public class FreddyController : MonoBehaviour
     public DoorControl doorControl;
     public jumpscareController jumpscareControl;
 
+    public event Action freddyJumpscare;
+
     public int locationIndex = 0;
     
     public int location = 6;
     int prevTime = 0;
     int timePerChance = 7;
+
+    int timeSinceJumpscare = 100000;
 
     int jumpscareFailTime = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,13 +48,18 @@ public class FreddyController : MonoBehaviour
         {
             prevTime = clock.seconds;
             
-            if (Random.Range(1, 2) == 1)
+            if (UnityEngine.Random.Range(1, 2) == 1)
             {
                 Move();
                 Debug.Log("Freddy: " + locationIndex + " " + cameraControl.camLocations[locationIndex]);
             }
            
             
+        }
+
+        if (clock.seconds == timeSinceJumpscare + 4)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -67,6 +77,7 @@ public class FreddyController : MonoBehaviour
                 if (doorControl.leftDoorClosed == false)
                 {
                     jumpscare();
+                    locationIndex = 0;
                 } else
                 {
                     locationIndex = 0;
@@ -77,6 +88,7 @@ public class FreddyController : MonoBehaviour
                 if (doorControl.rightDoorClosed == false)
                 {
                     jumpscare();
+                    locationIndex = 0;
                 } else
                 {
                     locationIndex = 0;
@@ -84,7 +96,7 @@ public class FreddyController : MonoBehaviour
                 break;
 
             default:
-                locationIndex += Random.Range(1, 3);
+                locationIndex += UnityEngine.Random.Range(1, 3);
                 break;
         
         }
@@ -93,8 +105,10 @@ public class FreddyController : MonoBehaviour
     void jumpscare()
     {
         Debug.Log("Jumpscare!");
-        jumpscareControl.killerAnimtronic = "Freddy";
-        SceneManager.LoadScene("Jumpscare");
+        //jumpscareControl.killerAnimtronic = "Freddy";
+        freddyJumpscare.Invoke();
+        timeSinceJumpscare = clock.seconds;
+       
     }
 }
 
