@@ -17,17 +17,17 @@ public class jumpscareController : MonoBehaviour
         
     }
 
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject); // Destroys duplicate instances if a new scene tries to create one
-        }
-    }
+    // void Awake()
+    // {
+    //     if (Instance == null)
+    //     {
+    //         Instance = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject); // Destroys duplicate instances if a new scene tries to create one
+    //     }
+    // }
 }
 

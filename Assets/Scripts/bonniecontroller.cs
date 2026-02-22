@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
+using UnityEngine.SceneManagement;
 
 public class bonniecontroller : MonoBehaviour
 {
@@ -9,10 +11,13 @@ public class bonniecontroller : MonoBehaviour
     public DoorControl doorControl;
     public jumpscareController jumpscareControl;
 
+    public event Action bonnieJumpscare;
+
     public int locationIndex = 0;
     
     public int location = 6;
     int prevTime = 0;
+    int timeSinceJumpscare = 100000;
     int timePerChance = 2;
 
     int jumpscareFailTime = 2;
@@ -28,7 +33,7 @@ public class bonniecontroller : MonoBehaviour
     void Update()
     {
         moveTime();
-        
+        Debug.Log(timeSinceJumpscare + " " + clock.seconds);
     }
 
     void moveTime()
@@ -37,13 +42,18 @@ public class bonniecontroller : MonoBehaviour
         {
             prevTime = clock.seconds;
             
-            if (Random.Range(1, 10) == 5)
+            if (UnityEngine.Random.Range(1, 10) == 5)
             {
                 Move();
                 Debug.Log("Bonnie: " + locationIndex + " " + cameraControl.camLocations[locationIndex]);
             }
            
             
+        }
+
+        if (clock.seconds == timeSinceJumpscare + 4)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -61,6 +71,7 @@ public class bonniecontroller : MonoBehaviour
                 if (doorControl.leftDoorClosed == false)
                 {
                     jumpscare();
+                    locationIndex = 0;
                 } else
                 {
                     locationIndex = 0;
@@ -71,6 +82,7 @@ public class bonniecontroller : MonoBehaviour
                 if (doorControl.rightDoorClosed == false)
                 {
                     jumpscare();
+                    locationIndex = 0;
                 } else
                 {
                     locationIndex = 0;
@@ -78,7 +90,7 @@ public class bonniecontroller : MonoBehaviour
                 break;
 
             default:
-                locationIndex += Random.Range(1, 3);
+                locationIndex += UnityEngine.Random.Range(1, 3);
                 break;
         
         }
@@ -87,6 +99,10 @@ public class bonniecontroller : MonoBehaviour
     void jumpscare()
     {
         Debug.Log("Jumpscare!");
-        jumpscareControl.killerAnimtronic = "Bonnie";
+        //jumpscareControl.killerAnimtronic = "Bonnie";
+        bonnieJumpscare.Invoke();
+        timeSinceJumpscare = clock.seconds;
+
+
     }
 }

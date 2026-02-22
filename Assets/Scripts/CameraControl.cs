@@ -7,6 +7,10 @@ public class CameraControl : MonoBehaviour
 
     public power Power;
 
+    [SerializeField] public FreddyController freddy;
+    [SerializeField] public bonniecontroller bonnie;
+    [SerializeField] public chicacontroller chica;
+
     public bool camEnabled = false;
     public int currentCam = 6;
     public event Action disableCamEvent;
@@ -32,6 +36,9 @@ public class CameraControl : MonoBehaviour
     void Start()
     {
         Power = Power.GetComponent<power>();
+        freddy.freddyJumpscare += Jumpscare;
+        bonnie.bonnieJumpscare += Jumpscare;
+        chica.chicaJumpscare += Jumpscare;
     }
 
     // Update is called once per frame
@@ -61,6 +68,11 @@ public class CameraControl : MonoBehaviour
 
         }
         
+    }
+
+    public void Jumpscare()
+    {
+        disableCamEvent.Invoke();
     }
     public void camselect1()
     {

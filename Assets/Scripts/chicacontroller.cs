@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
+using UnityEngine.SceneManagement;
 
 public class chicacontroller : MonoBehaviour
 {
@@ -9,11 +11,15 @@ public class chicacontroller : MonoBehaviour
     public DoorControl doorControl;
     public jumpscareController jumpscareControl;
 
+    public event Action chicaJumpscare;
+
     public int locationIndex = 0;
     
     public int location = 6;
     int prevTime = 0;
     int timePerChance = 10;
+
+    int timeSinceJumpscare = 100000;
 
     int jumpscareFailTime = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,13 +43,18 @@ public class chicacontroller : MonoBehaviour
         {
             prevTime = clock.seconds;
             
-            if (Random.Range(1, 3) == 2)
+            if (UnityEngine.Random.Range(1, 3) == 2)
             {
                 Move();
                 Debug.Log("Chica: " + locationIndex + " " + cameraControl.camLocations[locationIndex]);
             }
            
             
+        }
+
+        if (clock.seconds == timeSinceJumpscare + 4)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -61,6 +72,7 @@ public class chicacontroller : MonoBehaviour
                 if (doorControl.leftDoorClosed == false)
                 {
                     jumpscare();
+                    locationIndex = 0;
                 } else
                 {
                     locationIndex = 0;
@@ -71,6 +83,7 @@ public class chicacontroller : MonoBehaviour
                 if (doorControl.rightDoorClosed == false)
                 {
                     jumpscare();
+                    locationIndex = 0;
                 } else
                 {
                     locationIndex = 0;
@@ -78,7 +91,7 @@ public class chicacontroller : MonoBehaviour
                 break;
 
             default:
-                locationIndex += Random.Range(1, 3);
+                locationIndex += UnityEngine.Random.Range(1, 3);
                 break;
         
         }
@@ -87,6 +100,8 @@ public class chicacontroller : MonoBehaviour
     void jumpscare()
     {
         Debug.Log("Jumpscare!");
-        jumpscareControl.killerAnimtronic = "Chica";
+        //jumpscareControl.killerAnimtronic = "Chica";
+        chicaJumpscare.Invoke();
+        timeSinceJumpscare = clock.seconds;
     }
 }

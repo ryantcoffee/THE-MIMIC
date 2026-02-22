@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Office.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Jumpscare.unity
+    path: Assets/Scenes/GameOver.unity
     guid: 8a448111cb7dd654e8340b9cbd463125
   - enabled: 1
     path: Assets/Scenes/6AM.unity
