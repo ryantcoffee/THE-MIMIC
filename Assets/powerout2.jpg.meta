@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cf1014cc2f047d64492c55dfb0b01458
+guid: 63b970201995b204098f194f38f3f9a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1064747449426253215
-    second: bonnie jumpscare placeholder_0
+      213: -6619114062198887216
+    second: powerout2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bonnie jumpscare placeholder_0
+      name: powerout2_0
       rect:
         serializedVersion: 2
-        x: 38
+        x: 0
         y: 0
-        width: 451
-        height: 360
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16ae17506d14931f0800000000000000
-      internalID: -1064747449426253215
+      spriteID: 0dca7da74de2424a0800000000000000
+      internalID: -6619114062198887216
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bonnie jumpscare placeholder_0: -1064747449426253215
+      powerout2_0: -6619114062198887216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

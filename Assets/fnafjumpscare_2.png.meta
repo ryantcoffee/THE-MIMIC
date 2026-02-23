@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4378eeacdb5147a4aa3185eebeaf226b
+guid: 8d2d647101f8e2d40ae29ee4c18df0a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5672903387922700320
-    second: chica jumpscare placeholder_0
+      213: -1367148713021460172
+    second: fnafjumpscare_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chica jumpscare placeholder_0
+      name: fnafjumpscare_2_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 0
-        width: 1137
-        height: 720
+        x: 114
+        y: 275
+        width: 5093
+        height: 2607
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0281e3233933abe40800000000000000
-      internalID: 5672903387922700320
+      spriteID: 431393d2d79e60de0800000000000000
+      internalID: -1367148713021460172
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chica jumpscare placeholder_0: 5672903387922700320
+      fnafjumpscare_2_0: -1367148713021460172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
