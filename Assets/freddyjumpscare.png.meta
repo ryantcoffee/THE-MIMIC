@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 614585fb5e3f3dc41a416db47c311307
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8649798365492061382
+    second: fnafjumpscare_4_0
+  - first:
+      213: 8376070591382944600
+    second: fnafjumpscare_4_1
+  - first:
+      213: 8364944605977039930
+    second: fnafjumpscare_4_2
+  - first:
+      213: -3685879589148259579
+    second: fnafjumpscare_4_3
+  - first:
+      213: 6732311683917208275
+    second: fnafjumpscare_4_4
+  - first:
+      213: 565058159127615509
+    second: fnafjumpscare_4_5
+  - first:
+      213: -4157907917361569988
+    second: fnafjumpscare_4_6
+  - first:
+      213: -691484081471063975
+    second: fnafjumpscare_4_7
+  - first:
+      213: 7003991939484289636
+    second: fnafjumpscare_4_8
+  - first:
+      213: -727559179268718336
+    second: fnafjumpscare_4_9
+  - first:
+      213: 8722343737124307488
+    second: fnafjumpscare_4_10
+  - first:
+      213: 5198946680110495897
+    second: fnafjumpscare_4_11
+  - first:
+      213: 4128723890546071884
+    second: fnafjumpscare_4_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fnafjumpscare_4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3037
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4a8e9e8c14a0870800000000000000
+      internalID: 8649798365492061382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3049
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85bf9f413d7cd3470800000000000000
+      internalID: 8376070591382944600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3049
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34d41dbcc0461470800000000000000
+      internalID: 8364944605977039930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 3037
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b84f3da0029dcc0800000000000000
+      internalID: -3685879589148259579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 3043
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dad815aec9fd6d50800000000000000
+      internalID: 6732311683917208275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 3038
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518dc34e66d77d700800000000000000
+      internalID: 565058159127615509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_6
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 3038
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f11e857c42c46c0800000000000000
+      internalID: -4157907917361569988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_7
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 3037
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958741c34ea5766f0800000000000000
+      internalID: -691484081471063975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 153
+        width: 5266
+        height: 2908
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a09aa6f8d233160800000000000000
+      internalID: 7003991939484289636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 3037
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0010d9ef7c037e5f0800000000000000
+      internalID: -727559179268718336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_10
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 3038
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022c52c7a6dfb0970800000000000000
+      internalID: 8722343737124307488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 3040
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998be2ad57e562840800000000000000
+      internalID: 5198946680110495897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnafjumpscare_4_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1305
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49daa7e08c2c4930800000000000000
+      internalID: 4128723890546071884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fnafjumpscare_4_0: 8649798365492061382
+      fnafjumpscare_4_1: 8376070591382944600
+      fnafjumpscare_4_10: 8722343737124307488
+      fnafjumpscare_4_11: 5198946680110495897
+      fnafjumpscare_4_12: 4128723890546071884
+      fnafjumpscare_4_2: 8364944605977039930
+      fnafjumpscare_4_3: -3685879589148259579
+      fnafjumpscare_4_4: 6732311683917208275
+      fnafjumpscare_4_5: 565058159127615509
+      fnafjumpscare_4_6: -4157907917361569988
+      fnafjumpscare_4_7: -691484081471063975
+      fnafjumpscare_4_8: 7003991939484289636
+      fnafjumpscare_4_9: -727559179268718336
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

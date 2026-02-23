@@ -51,7 +51,7 @@ public class bonniecontroller : MonoBehaviour
             
         }
 
-        if (clock.seconds == timeSinceJumpscare + 4)
+        if (clock.seconds == timeSinceJumpscare + 3)
         {
             SceneManager.LoadScene("GameOver");
         }
